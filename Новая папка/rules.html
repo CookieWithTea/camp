@@ -1,0 +1,64 @@
+<?php
+    require ('steamauth/steamauth.php');
+    require ('steamauth/userInfo.php');    
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cave Rules</title>
+    <script src="https://kit.fontawesome.com/c6328c0c39.js" crossorigin="anonymous"></script>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+            <img src="assets/images/logo3.png" class="logo">
+            <a class="nav_link" href="index.php"> <i class="fas fa-home"></i><b><p>Главная</p></b> </a>
+            <a class="nav_link" href="donate.php"> <i class="fas fa-crown"></i><b><p>Привилегии</p></b> </a>
+            <a class="nav_link" href="rules.php"> <i class="fas fa-book"></i><b><p>Правила</p></b> </a>
+            <a class="nav_link" href="servers.php"> <i class="fas fa-server"></i><b><p>Сервера</p></b> </a>
+            <a class="nav_link" href="news.php"> <i class="fas fa-newspaper"></i><b><p>Новости</p></b> </a>
+            <? if(isset ($_SESSION['steamid'])) {?>
+                <a class="login" href="?logout"> <div class="login">Выйти</div> </a> <a class="da" href="profile.php"> <img class="logout" src="<?=$steamprofile['avatarfull'];?>"> <b class="nick_name"><?=$steamprofile['personaname'];?></b> </a>
+            <? }else {?>
+                <a class="login" href="?login"> <div class='login'>Войти</div> </a>
+            <? } ?>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <div class="catalog">
+            <div class="rules-table"> 
+                    <h1>ПРАВИЛА ДОНАТЕРОВ</h1>
+                <div class="rules-text">
+                    <b>1. Нельзя задерживать раунд</b><br>
+                    <b>2. Нельзя мешать Тамаде проводить ивент</b><br>
+                    <b>3. Всякие попытки уложить сервер также запрещаются</b><br>
+                    <b>4. Не больше четырёх изменений роли (кроме зрителя), пяти спавн отрядов и десяти выданных предметов за раунд</b><br>
+                    <b>5. Запрещено переводить себя за SCP-106 или SCP-079 после его деконтеймента</b><br>
+                    <b>6. Запрещено спавнить себя, после взрыва боеголовки, кроме MTF и CI</b><br>
+                    <b>7. Интервал между спавн отрядов - 1,5 минуты</b><br>
+                    <b>8. Запрещено спавниться или спавнить отряд для того чтобы убить сбегающего Class-D/Учёного </b><br>
+                    <b>9.1. Нельзя выдавать себе до 5 минут раунда: оружие, гранаты, мячик, любые карты имеющие доступ к арсеналу или MicroHID</b><br>
+                    <b>9.2. Нельзя выдавать себе до 10 минут раунда: карты Facility Manager, Containment Engineer, O5</b><br>
+                    <b>10. Не больше 5 гранат, 3 мячиков, 1 MicroHID выданных за раунд</b><br>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    </body>
+
+    </html>

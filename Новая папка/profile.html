@@ -1,0 +1,142 @@
+<?php
+    require ('steamauth/steamauth.php');
+    require ('steamauth/userInfo.php');  
+
+    if (!$_SESSION['steam_steamid']) {
+        header("Location: index.php");
+    }
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cave Profile</title>
+    <script src="https://kit.fontawesome.com/c6328c0c39.js" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+            <img src="assets/images/logo3.png" class="logo">
+            <a class="nav_link" href="index.php"> <i class="fas fa-home"></i><b><p>Главная</p></b> </a>
+            <a class="nav_link" href="donate.php"> <i class="fas fa-crown"></i><b><p>Привилегии</p></b> </a>
+            <a class="nav_link" href="rules.php"> <i class="fas fa-book"></i><b><p>Правила</p></b> </a>
+            <a class="nav_link" href="servers.php"> <i class="fas fa-server"></i><b><p>Сервера</p></b> </a>
+            <a class="nav_link" href="news.php"> <i class="fas fa-newspaper"></i><b><p>Новости</p></b> </a>
+            <? if(isset ($_SESSION['steamid'])) {?>
+                <a class="login" href="?logout"> <div class="login">Выйти</div> </a> <a class="da" href="profile.php"> <img class="logout" src="<?=$steamprofile['avatarfull'];?>"> <b class="nick_name"><?=$steamprofile['personaname'];?></b> </a>
+            <? }else {?>
+                <a class="login" href="?login"> <div class='login'>Войти</div> </a>
+            <? } ?>
+        </nav>
+
+    </header>
+    <section id="profile_1">
+    <div class="container_profile">
+        <div class="row">
+
+        <div id="openModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-title">Пополнение</p>
+        <a href="#close" title="Close" class="close">×</a>
+      </div>
+      <div class="modal-body">    
+        <p class='enter-sum'>Введите сумму:</p> <input type="text" placeholder="Сумма пополнения" name="sum" class="insert-sum">
+
+            <div class='buy-buttom'>
+                Пополнить
+            </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="left-table">
+            <div class="balance-section profile-section">
+                <h1 class="infos">Баланс</h1>
+                                    <div class="balance-counter">
+                                        <span>0</span> <small>рублей</small>
+                                     </div>
+                                     <a href='#openModal' class='payyment'>
+                                    <div class="balance-add">
+                                        <i class="fas fa-credit-card"></i>
+                                        <p> Пополнить баланс </p>
+                                    </div>
+                                     </a>
+            </div>
+
+            <div class="perk-section profile-section">
+                <div class="section-name">Привилегии</div>
+                <div class="perk">
+                <i class="fas fa-hand-sparkles prefix-i"></i>
+                    <p class="perk-name">Экстрасенс</p>
+                    <p class="perk-desc">Почуствуй силу знаний</p>
+                    <div class="gradient-button buy-prefix">Приобрести</div>
+                </div>
+
+                <div class="perk">
+                <i class="fas fa-magic prefix-i"></i>
+                    <p class="perk-name">Друид</p>
+                    <p class="perk-desc">Перевоплощение</p>
+                    <div class="gradient-button buy-prefix">Приобрести</div>
+                </div>
+
+                <div class="perk">
+                <i class="fas fa-hat-wizard prefix-i"></i>
+                    <p class="perk-name">Чародей</p>
+                    <p class="perk-desc">Наколдуй себе тян</p>
+                    <div class="gradient-button buy-prefix">Приобрести</div>
+                </div>
+
+            </div>
+
+        </div>
+                
+        <div class="right-table">
+            <div class="profile-table profile-section"> 
+                    <h1>ПРОФИЛЬ</h1>
+                    <img src='<?=$steamprofile['avatarfull']?>' class='avatar'> <h1 class="steam-name"><?=$steamprofile['personaname']?></h1>
+            </div>
+
+        <div class="user-section profile-section">
+            
+            <div class="section-name">Личные данные</div>
+               
+                    <p class='player-info'> Ваш ID: 1 </p>
+                    <p class='player-info'> SteamID64: <?=$steamprofile['steamid']?> </p>
+                    <p class='player-info'> Дискорд: <a class='oauth' href='https://discord.com/api/oauth2/authorize?client_id=727954560731054110&redirect_uri=https%3A%2F%2Frus-paradise.ru%2Fcave%2Fprofile.php&response_type=code&scope=identify'> Привязать </a> </p>
+                    <p class='player-info'> Общий донат: Отсутствует </p>
+               
+        </div>
+            </div>
+            <div class="profile-table2 profile-section">
+            <h1 class="infos">FAQ</h1>
+            1. Когда будет выдан донат?
+            <p class='answer'>В течении 24 часов, вам выдадут привилегию<p>
+            2. Я купил донат, но мне ничего не выдали, что делать?
+            <p class='answer'>Если прошло 24 часа, а вам ничего не выдали, обратитесь к нему <br>stwx.#0239 в <a class='disscord' href='https://discord.gg/C7qKWWs'>дискорд</a><p>
+            3. Я приобрёл донат, и хочу вернуть деньги
+            <p class='answer'>К сожалению, деньги потраченные на Донат невозможно вернуть</p>
+            4. У меня уже куплен один из Донатов, могу ли я поменять его на другой?
+            <p class='answer'>Конечно, но цена останеться такой-же</p>
+            5. Есть ли возрастные ограничения?
+            <p class='answer'>Нет. Самое главное не нарушать <br>правила пользования Доната</p>
+        </div>
+    </div>
+    
+            </div> 
+    </div>
+            </section>
+    </body>
+
+    </html>

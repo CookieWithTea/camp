@@ -1,0 +1,54 @@
+<?php
+    require ('steamauth/steamauth.php');
+    require ('steamauth/userInfo.php');
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/js/background.js">
+    <title>Cave Village</title>
+    <script src="https://kit.fontawesome.com/c6328c0c39.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+    
+        <nav class="nav">
+            <img src="assets/images/logo3.png" class="logo">
+            <a class="nav_link" href="index.php"> <i class="fas fa-home"></i><b><p>Главная</p></b> </a>
+            <a class="nav_link" href="donate.php"> <i class="fas fa-crown"></i><b><p>Привилегии</p></b> </a>
+            <a class="nav_link" href="rules.php"> <i class="fas fa-book"></i><b><p>Правила</p></b> </a>
+            <a class="nav_link" href="servers.php"> <i class="fas fa-server"></i><b><p>Сервера</p></b> </a>
+            <a class="nav_link" href="news.php"> <i class="fas fa-newspaper"></i><b><p>Новости</p></b> </a>
+            <? if(isset ($_SESSION['steamid'])) {?>
+                <a class="login" href="?logout"> <div class="login">Выйти</div> </a> <a class="da" href="profile.php"> <img class="logout" src="<?=$steamprofile['avatarfull'];?>"> <b class="nick_name"><?=$steamprofile['personaname'];?></b> </a>
+            <? }else {?>
+                <a class="login" href="?login"> <div class='login'>Войти</div> </a>
+            <? } ?>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <div class="catalog">
+            <div class="news-table"> 
+                    <h1>Открытие сайта</h1>
+            <div class="news-image">
+                <img src="assets/images/scp.jpg" width="800px" height="500px">
+            </div>
+                <div class="news-text">
+                    <b> Привет, игрокам нашего проекта <span class="cave">Cave Village</span>, в этот прекрасный день, мы открываем собственный сайт, где вы сможете: <span class="cave">Купит донат, смотреть новости и т.д</span>. В будущем, функционал, будет пополнятся, а пока, на этом всё, это была тестовая новость, спасибо за внимание! <br> <span class="cave">21.07.20 19:43 [Moskov]</span>  </b>
+                </div>
+
+            </div>
+    </div>
+
+</body>
+
+</html>

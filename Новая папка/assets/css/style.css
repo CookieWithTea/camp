@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+
+body {
+    margin: 0;
+    background-color: #212124;
+}
+
+.container_index {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.container_donate {
+    width: 100%;
+    height: 100%;
+    margin: 90px auto;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 45px auto;
+    text-decoration: none;
+}
+
+.catalog {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.container_profile {
+    width: 100%;
+    margin: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#profile_1 .container_profile .row {
+    justify-content: center;
+}
+
+#profile_1 .left-table {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#profile_1 .right-table {
+    margin-right: 30px;
+}
+
+section {
+    display: block;
+    margin: auto;
+}
+
+#profile_1 .container_profile {
+    padding: 0 30px 30px !important;
+}
+section .container_profile {
+    max-width: 1400px;
+}
+
+/*ШАПКА*/
+
+.nav {
+    display: flex;
+    align-items: center;
+    background: #161618;
+    width: 100%;
+    height: 80px;
+}
+
+.nav_link {
+    margin: 20px;
+    text-decoration: none;
+    color: #666;
+    font-size: 1.7em;
+    font-family: monospace;
+    transition: 0.5s;
+}
+
+.nav_link:hover {
+    color: #e7b878;
+}
+
+.nav_link p{
+    display: inline;
+    vertical-align: middle;
+}
+
+.fa-crown {
+    font-weight: 400;
+    height: 45px;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-right: 8px;
+}
+
+.fa-server {
+    font-weight: 400;
+    height: 42px;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-right: 8px;
+}
+
+.fa-book {
+    font-weight: 400;
+    height: 42px;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-right: 8px;
+}
+
+.fa-home {
+    font-weight: 400;
+    height: 43px;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-right: 8px;
+}
+
+.fa-user {
+    font-weight: 400;
+    height: 30px;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-right: 8px;
+}
+
+.fa-newspaper {
+    font-weight: 400;
+    height: 42px;
+    font-size: 20px;
+    vertical-align: middle;
+    padding-top: 20px;
+    margin-right: 8px;
+}
+
+.logo {
+    height: 130px;
+    vertical-align: middle;
+}
+
+.login {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #d39f55;
+    display: block;
+    width: 120px;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    border: 6px;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 20px;
+    line-height: 43px;
+}
+
+.logout {
+    background-position: 50%;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border: 2px solid #e0a655;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.nick_name {
+    text-decoration: none;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.da {
+    text-decoration: none;
+}
+
+/*BODY*/
+
+.text {
+    margin-top: 140px;
+    margin-left: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+.cave_text {
+    color: #e0a655;
+}
+
+.discord {
+    float: right;
+    margin-right: 20px;
+    margin-top: 150px;
+}
+
+/*RULES ВКЛАДКА*/
+
+.rules-table {
+    display: block;
+    width: 1110px;
+    height: 740px;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    border: 6px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.rules-text {
+    font-size: 1.2em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    margin-left: 30px;
+    line-height: 50px;
+}
+
+/*DONATE ВКЛАДКА*/
+
+.ready {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.product {
+    display: block;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    width: 320px;
+    height: 450px;
+    text-align: center;
+    margin: 0 50px 30px 50px;
+    border-top: 4px solid #e0a655;
+    border-bottom: 4px solid #e0a655;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.1);
+    border-top: 6px solid #e0a655;
+    border-bottom: 6px solid #e0a655;
+}
+
+.wiz {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 70px;
+}
+
+.druid {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 70px;
+}
+
+.extra {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 70px;
+}
+
+.wiz_block {
+    margin: auto;
+    font-size: 14px;
+    height: 70px;
+    width: 220px;
+    display: block;
+    background-color: #b636b6;
+    border: 6px;
+    border-radius: 15px 100px 15px 100px;
+}
+
+.druid_block {
+    margin: auto;
+    font-size: 14px;
+    height: 70px;
+    width: 220px;
+    display: block;
+    background-color: #086522;
+    border: 6px;
+    border-radius: 15px 100px 15px 100px;
+}
+
+.extra_block {
+    margin: auto;
+    font-size: 14px;
+    height: 70px;
+    width: 220px;
+    display: block;
+    background-color: #819921;
+    border: 6px;
+    border-radius: 15px 100px 15px 100px;
+}
+
+.donate_text {
+    font-size: 15px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 20px;
+    margin-top: 50px;
+}
+
+/*SERVERS ВКЛАДКА*/
+
+.server {
+    display: block;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    width: 200px;
+    height: 350px;
+    text-align: center;
+    margin: 0 50px 30px 50px;
+    border-top: 4px solid #e0a655;
+    border-bottom: 4px solid #e0a655;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.server:hover {
+    transform: scale(1.1);
+}
+
+.nr {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 0px;
+}
+
+.ready_serv {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.logo_nr {
+    margin-top: 0px;
+}
+
+.IP {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    line-height: 50px;
+}
+
+/*PROFILE ВКЛАДКА*/
+
+.balance-section {
+    display: block;
+    width: 300px;
+    height: 200px;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    border: 6px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    border-top: 4px solid #e0a655;
+    border-bottom: 4px solid #e0a655;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.balance-section .balance-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balance-section .balance-counter span {
+    font-size: 40px;
+    height: 60px;
+    line-height: 45px;
+    margin-right: 5px;
+    font-family: Acrom Regular, sans-serif;
+}
+
+.balance-section .balance-counter small {
+    font-family: Acrom Regular, sans-serif;
+    font-size: 18px;
+    line-height: 55px;
+    color: #7F8C8D;
+}
+
+.balance-section .balance-add {
+    height: 98px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #29292e;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.balance-section .balance-add i {
+    color: #e0a655;
+    font-size: 35px;
+    margin: 10px 10px 0;
+}
+
+.balance-section .balance-add p {
+    font-family: Acrom Regular, sans-serif;
+    color: #7F8C8D;
+    margin: 10px 10px 0;
+    font-size: 18px;
+}
+
+.profile-table {
+    display: block;
+    width: 500px;
+    height: 270px;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    border: 6px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    border-top: 4px solid #e0a655;
+    border-bottom: 4px solid #e0a655;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.profile-table2 {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: block;
+    width: 300px;
+    height: 707px;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    border: 6px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    border-top: 4px solid #e0a655;
+    border-bottom: 4px solid #e0a655;
+    border-radius: 30px;
+}
+
+.avatar {
+    border: 4px solid #e0a655;
+    border-radius: 50%; 
+    width: 20%;
+}
+
+.steam-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+.player-info {
+    margin-top: 40px;
+    line-height: 20px;
+    margin-left: 50px;
+}
+
+.infos {
+    font-size: 1.3em;
+}
+
+.answer {
+    font-size: 0.8em;
+    color: rgb(121, 119, 119);
+    line-height: 16px;
+}
+
+.disscord {
+    text-decoration-color: aqua;
+    text-decoration: aqua;
+    color: rgb(22, 163, 163);
+}
+
+.oauth {
+    text-decoration-color: aqua;
+    text-decoration: aqua;
+    color: rgb(22, 163, 163);
+}
+
+#profile_1 .profile-section {
+    background-color: #1c1c22;
+    border-top: 4px solid #e0a655;
+    border-bottom: 4px solid #e0a655;
+    border-radius: 30px;
+    margin: 30px 0 30px;
+    max-width: 825px;
+    opacity: 0.9;
+    align-items: center;
+}
+
+.section-name {
+    height: 40px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.perk-section .section-name {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.3em;
+    line-height: 50px;
+    text-align: center;
+}
+
+.perk-section .perk {
+    width: 90%;
+    color: white;
+    align-items: center;
+    margin: auto;
+    border-bottom: 1px solid #29292e;
+}
+
+#profile_1 .perk-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    display: block;
+    color: tomato;
+    justify-content: center;
+}
+
+.perk {
+    margin-bottom: 25px;
+}
+
+.perk-section .prefix-i {
+    color: #000;
+    background: rgba(255, 253, 160, 1);
+    background: -webkit-linear-gradient( left, #00ffff 0%, #97fba0 25%, #97b1fb 50%, #00ffff 100%) repeat;
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.perk-section i {
+    font-size: 35px;
+    float: left;
+    margin-top: 5px;
+}
+
+.perk-name {
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    line-height: 20px;
+}
+
+.perk-desc {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 50px;
+    color: #7F8C8D;
+    line-height: 5px;
+}
+
+.gradient-button {
+    margin: 25px 50px;
+    padding: 9px 34px;
+    overflow: hidden;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-width: 0;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #e0a655, #7e4c07);
+    max-width: 190px;
+}
+
+.gradient-button, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.user-section .section-name {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1em;
+    line-height: 65px;
+    text-align: center;
+}
+
+#profile_1 .user-section {
+    flex-direction: column;
+    min-width: 500px;
+    min-height: 150px;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.5em;
+}
+  
+/* свойства модального окна по умолчанию */
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: auto;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	  pointer-events: auto; /* элемент видим для событий мыши */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    width: auto;
+    height: 100px;
+    margin: auto
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 500px;
+      margin: auto; /* для отображения модального окна по центру */
+      border-radius: 10%;
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #1c1c22;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 15px;
+    outline: 0;
+    width: 600px;
+    height: 325px;
+    text-align: center;
+    line-height: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: auto
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      text-align: center;
+      line-height: 140px;
+      font-family: 'Montserrat Alternates', sans-serif;
+      margin: 300px auto
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #a89292;
+    text-align: center;
+}
+.modal-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 2.1em;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: white;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #e0a655;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    margin: auto
+}
+
+.payyment {
+    text-decoration: none;
+}
+
+.enter-sum {
+    font-size: 1.5em;
+    display: inline;
+    color: white;
+}
+
+.insert-sum {
+    font-size: 1.2em;
+    border: 2px #e0a655 solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #1c1c22;
+    height: 30px;
+    color: white;
+}
+
+.buy-buttom {
+    display: block;
+    background: linear-gradient(90deg, #185713, #215a06);
+    width: 110px;
+    height: 40px;
+    margin: auto;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    font-size: 1.3em;
+}
+
+
+/*ВКЛДАКА НОВОСТЕЙ*/
+
+.news-table {
+    display: block;
+    width: 1000px;
+    background-color: #1c1c22;
+    opacity: 0.9;
+    border: 6px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.news-image {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.news-text {
+    font-size: 1.4em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-left: 30px;
+    line-height: 50px;
+}
+
+.cave {
+    color: #e0a655;
+}
+

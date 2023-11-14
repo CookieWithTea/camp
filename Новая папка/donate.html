@@ -1,0 +1,59 @@
+<?php
+    require ('steamauth/steamauth.php');
+    require ('steamauth/userInfo.php');    
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cave Donate</title>
+    <script src="https://kit.fontawesome.com/c6328c0c39.js" crossorigin="anonymous"></script>
+    <style>
+
+      
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+            <img src="assets/images/logo3.png" class="logo">
+            <a class="nav_link" href="index.php"> <i class="fas fa-home"></i><b><p>Главная</p></b> </a>
+            <a class="nav_link" href="donate.php"> <i class="fas fa-crown"></i><b><p>Привилегии</p></b> </a>
+            <a class="nav_link" href="rules.php"> <i class="fas fa-book"></i><b><p>Правила</p></b> </a>
+            <a class="nav_link" href="servers.php"> <i class="fas fa-server"></i><b><p>Сервера</p></b> </a>
+            <a class="nav_link" href="news.php"> <i class="fas fa-newspaper"></i><b><p>Новости</p></b> </a>
+            <? if(isset ($_SESSION['steamid'])) {?>
+                <a class="login" href="?logout"> <div class="login">Выйти</div> </a> <a class="da" href="profile.php"> <img class="logout" src="<?=$steamprofile['avatarfull'];?>"> <b class="nick_name"><?=$steamprofile['personaname'];?></b> </a>
+            <? }else {?>
+                <a class="login" href="?login"> <div class='login'>Войти</div> </a>
+            <? } ?>
+        </nav>
+
+    </header>
+    <h1 class="ready">ДОСТУПНЫЕ ПРИВИЛЕГИИ:</h1>
+    <div class="container_donate">
+        
+        <div class="catalog">
+            <div class="product"> <div class="wiz_block"> <h1 class="wiz">Чародей</h1> </div> 
+                <p class="donate_text">Имеет возможность спавнить <br>MTF/CI до 5 раз и выдавать себе <br>до 10 предметов. +Права всех предыдущих видов донатных привилегий.</p>
+            </div>
+            <div class="product"> <div class="druid_block"> <h1 class="druid">Друид</h1> </div> 
+                <p class="donate_text">Имеет право сменить класс до <br>5 раз за 1 раунд. + Права <br>Экстрасенса</p>
+            </div>
+            <div class="product"> <div class="extra_block"> <h1 class="extra">Экстрасенс</h1> </div> 
+                <p class="donate_text">Имеет возможность узнать класс каждого игрока и другую информацию.</p> 
+            </div>
+        </div>
+        
+    </div>
+
+    </body>
+
+    </html>
